@@ -1,0 +1,69 @@
+body {
+    background-image:url(perros.jpg);
+    background-attachment: fixed;
+    margin:0;
+    font-family: monospace;
+}
+.contact {
+    margin: 0;
+}
+
+.contact__column {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.contact__title {
+    color: red;
+}
+
+
+form {
+    width: 450px;
+    margin: auto;
+    background: lightblue(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+h2 {
+    color:lightcoral;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-width: 200px;
+    max-width: 100%;
+}
+
+#button {
+    background: cadetblue;
+    color: #fff;
+    padding: 20px;
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    form{
+        width: 100px;
+    }
+}
