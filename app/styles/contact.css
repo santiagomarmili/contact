@@ -1,26 +1,51 @@
 body {
-    background-image:url(perros.jpg);
+    background-color: lightblue;
     background-attachment: fixed;
     margin:0;
     font-family: monospace;
 }
+
 .contact {
     margin: 0;
 }
 
 .contact__column {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+.contact__first-column {
+    flex-basis: 50%;
+}
+
+.contact__second-column {
+    flex-basis: 37.5%;
 }
 
 .contact__title {
-    color: red;
+    color:cadetblue;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
+.contact__icons {
+    height: 80px;
+    display: flex;
+}
 
-form {
-    width: 450px;
+.contact__svg {
+    height: 100%;
+    width: 100%;
+}
+
+.contact__about {
+    margin: 35px 0;
+}
+
+.contact__form {
     margin: auto;
     background: lightblue(0,0,0,0.4);
     padding: 10px 20px;
@@ -29,12 +54,9 @@ form {
     border-radius: 7px;
 }
 
-h2 {
-    color:lightcoral;
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    margin-bottom: 20px;
+.contact__form-title {
+    font-size: 20px;
+    padding-bottom: 20px;
 }
 
 input, textarea {
@@ -52,18 +74,42 @@ textarea {
     max-width: 100%;
 }
 
-#button {
+.contact__send {
     background: cadetblue;
+    border-radius: 10px;
     color: #fff;
     padding: 20px;
-}
-
-#button:hover {
     cursor: pointer;
+    min-width: 200px;
+    margin: 15px 0;
 }
 
-@media (max-width: 480px) {
-    form{
-        width: 100px;
+.contact__send:hover {
+    background: #fff;
+    color: cadetblue;
+}
+
+.contact__map{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .contact__column {
+        flex-wrap: wrap;
+    }
+
+    .contact__first-column {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .contact__second-column {
+        flex-basis: 90%;
+        margin-bottom: 50px;
+    }
+
+    .contact__send {
+        width: 100%;
     }
 }
